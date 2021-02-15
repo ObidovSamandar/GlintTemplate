@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #main-header-bg {
   height: 700px;
-  background-image: url(/imgs/wlc-bg1.jpg);
+  background-image: url(./imgs/wlc-bg1.jpg);
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -503,7 +503,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #testimonials-content {
-  background-image: url(/imgs/testimonials-bg.png);
+  background-image: url(./imgs/testimonials-bg.png);
   height: 600px;
   width: 100%;
   background-size: cover;
@@ -710,7 +710,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #footer {
-  background-image: url(/imgs/footer-bg.png);
+  background-image: url(./imgs/footer-bg.png);
   height: 400px;
   width: 100%;
   background-size: cover;
