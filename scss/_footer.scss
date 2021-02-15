@@ -1,0 +1,65 @@
+$main-color:#08d565;
+$white-color:#ffffff;
+$form-color:#32383a;
+$card-color:#131617;
+$topcardlink-color:#999799;
+$background-color:#0b0d0e;
+$topstickyheader-bgcolor:#2e3d44;
+$transtion-duration:.4s;
+$ptext-color:#959999;
+
+#footer{
+    background-image: url(/imgs/footer-bg.png);;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+}
+
+.companies-info{
+    padding-top: 40px;
+    .companies{
+        img{
+            filter: grayscale(100%);
+            transition: all $transtion-duration ease;
+        }
+        img:hover{
+            filter: none;
+            cursor: pointer;
+        }
+    }
+}
+.footer-nav{
+    padding: 90px 0;
+    &__info{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                margin-right: 18px;
+                a{
+                    color: $white-color;
+                    transition: all $transtion-duration ease;
+                    font-size: 14px;
+                }
+                a:hover{
+                    color: $main-color;
+                }
+                
+            }
+        }
+        p{
+            text-align: center;
+            font-size: 12px;
+            color: $form-color;
+            font-weight: 500;
+            span{
+                color: $main-color;
+            }
+        }
+    }
+}

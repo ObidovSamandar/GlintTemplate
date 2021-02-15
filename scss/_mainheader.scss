@@ -1,0 +1,110 @@
+$main-color:#08d565;
+$white-color:#ffffff;
+$form-color:#32383a;
+$card-color:#131617;
+$topcardlink-color:#999799;
+$background-color:#0b0d0e;
+$topstickyheader-bgcolor:#2e3d44;
+$transtion-duration:.4s;
+$ptext-color:#959999;
+
+@import"mixins";
+
+#main-header-bg{
+    height: 700px;
+    background-image: url(/imgs/wlc-bg1.jpg);
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#main-header{
+    border-bottom: 1px solid $card-color;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    position: relative;
+    z-index: 2;
+    
+}
+
+.navbar-content{
+
+    &__list{
+        &__item{
+        position: relative;
+        margin-right: 25px;
+            a{
+                color:$topcardlink-color;
+            }
+        }
+        &__item::before{
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 0%;
+            bottom: -38px;
+            background-color: $main-color;
+            transition: $transtion-duration ease;
+        }
+        &__item:hover::before{
+            width: 100%;
+        }
+    }
+}
+
+.search-sidebar-content{
+    .search-content{
+        a{
+            color: $topcardlink-color;
+            i{
+                color: $main-color;
+                padding-right: 10px;
+            }
+            transition: $transtion-duration all ease;
+        }
+        a:hover{
+            color: $white-color;
+        }
+    }
+}
+
+
+#main-header-slider-content{
+    height: 600px;
+}
+
+.slider-content-person-img{
+    img{
+        position: relative;
+        top: -35px;
+        z-index: 0;
+        height: 633px;
+        width: 100%;
+    }
+}
+.slider-content{
+    height: 600px;
+    @include flexstyle(column,center,flex-start);
+
+    &__title{
+        font-size: 58px;
+        letter-spacing: -3px;
+        font-family: 'Oswald', sans-serif;
+        span{
+            color: $main-color;
+        }
+    }
+    &__text{
+        font-size: 18px;
+        padding: 0 90px 0 25px;
+        margin: 33px 0;
+        border-left: 3px solid $main-color;
+    }
+    &__btn{
+        @include btnstyle(12px,25px,12px,22px);
+    }
+    &__btn:hover{
+        background-color: transparent;
+        color: $white-color;
+    }
+}

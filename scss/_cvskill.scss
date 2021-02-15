@@ -1,0 +1,138 @@
+$main-color:#08d565;
+$white-color:#ffffff;
+$form-color:#32383a;
+$card-color:#0e0f10;
+$topcardlink-color:#999799;
+$background-color:#0b0d0e;
+$topstickyheader-bgcolor:#2e3d44;
+$transtion-duration:.4s;
+$primary-title:#171c1e;
+$ptext-color:#959999;
+
+
+#cv-skill-content{
+    height: 610px;
+    padding: 60px 0;
+}
+.cv-skill-content-info{
+    height: 500px;
+
+}
+.cv-content{
+   img{
+       height: 100%;
+       width: 100%;
+   }
+   .player{
+       width: 80px;
+       height: 80px;
+       position: absolute;
+       text-align: center;
+       left: 40%;
+       top: 40%;
+       border-radius: 50%;
+       background-color: $main-color;
+       animation:player 2s linear infinite;
+       cursor: pointer;
+       i{
+           font-size: 35px;
+           line-height: 80px;    
+        } 
+   }
+}
+@keyframes player{
+    0%{
+        box-shadow:
+         0 0 0 0 rgba(8, 213, 101,0.1);
+    }
+    100%{
+        box-shadow:
+         0 0 0 40px rgba(8, 213, 101,0.1),
+    }
+}
+
+.cv-content-info{
+    span.primary{
+      @include primaryheader(80px,0,17px);
+    }
+    &__title{
+        font-size: 44px;
+        text-transform: uppercase;
+        letter-spacing: -3px;
+        span{
+            color: $main-color;
+        }
+    }
+    &__btn{
+        @include btnstyle(12px,25px,12px,22px);
+    }
+    &__btn:hover{
+        background-color: transparent;
+        color: $white-color;
+    }
+}
+
+
+.content-experience{
+    padding: 70px 0 0px 0;
+    .primary-content{
+        span.primary{
+            @include primaryheader(60px,-52px,12px);
+          }
+        small{
+            text-transform: uppercase;
+            color: $main-color;
+            font-weight: 600;
+        }
+        &__title{
+            font-size: 44px;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            span{
+                color: $main-color;
+            }
+        }
+    }
+}
+
+
+.primary-content-text{
+    align-items: center;
+    display: flex;
+    p{
+        margin: 0;
+        font-size: 15px;
+        text-transform: capitalize;
+        padding-left: 25px;
+        border-left: 3px solid $main-color;
+    }
+}
+.experience-lenta{
+    padding: 40px 0 70px 0;
+    &__lists{
+        background-color: $card-color;
+        padding: 20px 15px;
+        &__year{
+            font-weight: 500;
+        }
+        &__company{
+            color: $main-color;
+            text-transform: uppercase;
+        }
+        &__text{
+            font-size: 15px;
+            text-transform: capitalize;
+        }
+    }
+}
+.skills-percentage{
+    padding: 30px 0 50px 0;
+
+    .skill-bars{
+        text-align: center;
+        h4{
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+    }
+}

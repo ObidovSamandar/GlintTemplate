@@ -1,0 +1,88 @@
+$main-color:#08d565;
+$white-color:#ffffff;
+$form-color:#32383a;
+$card-color:#131617;
+$topcardlink-color:#999799;
+$background-color:#0b0d0e;
+$topstickyheader-bgcolor:#2e3d44;
+$transtion-duration:.4s;
+$ptext-color:#959999;
+
+.news-blogs-list{
+    padding: 50px 0 70px  0;
+
+    &__item{
+        &__info{
+            background-color: $white-color;
+            img{
+                width: 100%;
+            }
+            
+            .items-infos{
+                padding: 40px;
+
+                small{
+                    color: $topstickyheader-bgcolor;
+                    font-weight: 500;
+                }
+                h4{
+                    color: $background-color;
+                }
+                &__btn{
+                    color: $main-color;
+                    i{
+                        transition:all $transtion-duration ease;
+                    }
+                }
+                &__btn:hover{
+                    color: $main-color;
+                }
+                &__btn:hover i{
+                    transform: translateX(4px);
+                }
+            }
+        }
+    }
+}
+
+.news-form{
+    padding: 60px 0 50px 0;
+
+    &__info{
+        text-align: center;
+        small{
+            color: $main-color;
+            font-weight: 500;
+        }
+        h2{
+            span{
+                color: $main-color;
+            }
+        }
+        form{
+            .form-info{
+                @include flexstyle(row,center,flex-start);
+                .input-form{
+                    margin-right: 10px;
+                    input{
+                        outline: none;
+                        background-color: $form-color;
+                        padding: 10px 15px;
+                        border:1px solid $main-color;
+                        border-radius: 5px;
+                    }
+                }
+                .subscribe-btn{
+                    margin-top: 9px;
+                    a{
+                        @include btnstyle(12px,25px,12px,22px);
+                    }
+                    a:hover{
+                        background-color: transparent;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}

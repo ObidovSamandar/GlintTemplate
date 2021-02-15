@@ -1,0 +1,38 @@
+@mixin flexstyle($fd,$jc,$ai){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items:$ai;
+}
+@mixin btnstyle($pt,$pr,$pb,$pl) {
+    padding: $pt $pr $pb $pl;
+    color: $white-color;
+    text-transform: uppercase;
+    background-color: $main-color;
+    border-radius: 5px;
+    border: 1px solid $main-color;
+    transition: all $transtion-duration ease;
+    font-size: 14px;
+    i{
+        color: $main-color;
+        background-color: $white-color;
+        margin-left: 10px;
+        padding:7px 10px;
+        font-weight: 700;
+        border-radius: 5px;
+    }
+}
+
+@mixin primaryheader($fsz,$t,$l) {
+      position: absolute;
+      font-size: $fsz;
+      text-transform: uppercase;
+      top: $t;
+      font-family: 'Oswald',sans-serif;
+      z-index: -1;
+      left: $l;
+      font-weight: 700;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px $primary-title;
+}
